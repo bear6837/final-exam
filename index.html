@@ -1,0 +1,29 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+{% block title %} 無事不登三寶殿 {% endblock %}
+{% block headmessage %} 
+    <h3 style="font-family:Microsoft JhengHei;color:#FFFFFF">本站文章列表</a>
+{% endblock %}
+
+{% block content %} 
+    {% for post in posts %}
+        <div class='panel-header'style="background-color:#CCDDFF">
+            <div class='panel-heading'>
+                <p>
+                    <h4><a href='/post/{{post.slug}}'>{{ post.title }}</a></h4>
+                </p>
+            </div>
+            <div class='panel-body' style="background-color:#FFFFE0">
+                <p>
+                   {{ post.body | truncatechars:40 }}
+                </p>
+            </div>
+            <div class='panel-footer' style="background-color:#CCDDFF">
+                <p>
+                    發佈時間：{{ post.pub_date | date:"Y M d, h:m:s"}}
+                </p>
+            </div>
+        </div>
+        <br>
+    {% endfor %}
+{% endblock %}

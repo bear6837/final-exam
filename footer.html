@@ -1,0 +1,8 @@
+<!--footer.html-->
+{% block footer %}
+    {% if now %} 
+    <p><h5><font color="#FFFFFF">現在時刻:{{now}}</font></h5></p>
+    {% else %}
+    <p><h5><font color="#FFFFFF">本文內容選自網路，如有侵權請來信告知下架</font></h5></p>
+    {% endif %}
+{% endblock %}

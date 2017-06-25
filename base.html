@@ -1,0 +1,63 @@
+<!--base.html-->
+<!DOCTYPE html>
+ {% include 'bootstrap.html' %}
+<html>
+<link rel="stylesheet" href="static/css/w3.css">
+<head>
+    <meta charset = 'utf-8'>
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+</head>
+<body>
+    <div class="container-fluid">
+        {% include 'header.html' %}
+         <div class = "row-fluid">
+            <div class ='col-sm-4 col-md-4'>
+                <div class='panel panel-primary'>
+                    <div class='panel-heading'>
+                        <h3 style="font-family:DFKai-sb;color:#FFFFFF">
+                            好站分享
+                        </h3>
+                    </div>
+                    <p align = center>
+                        <img src="http://ww4.sinaimg.cn/bmiddle/5cdf73cbjw1eqlsj40putg209q0a0dhv.jpg";width="150" height="250">
+                    </p>                  
+                    <div class="list-group">
+                        <a href="https://www.facebook.com/%E7%84%A1%E4%BA%8B%E4%B8%8D%E7%99%BB%E4%B8%89%E5%AF%B6%E6%AE%BF-100102557272405/?notif_t=fbpage_fan_invite&notif_id=1497357619686127"  target="_blank" class="list-group-item list-group-item-action list-group-item-success">FB粉絲團</a>
+                        <a href="http://www.ettoday.net/news/focus/%E5%AF%B5%E7%89%A9%E5%8B%95%E7%89%A9/%E5%AF%B5%E7%89%A9%E7%84%A6%E9%BB%9E/"  target="_blank" class="list-group-item list-group-item-action list-group-item-info">ETNEWS</a>
+                        <a href="http://www.taeanimal.org.tw/child-animal/"  target="_blank" class="list-group-item list-group-item-action list-group-item-warning">財團法人台灣動物平權促進會</a>
+                        <a href="http://www.doghome.org.tw/phpbb2/indexnew.php"  target="_blank" class="list-group-item list-group-item-action list-group-item-danger">流浪動物花園</a>
+                        <a href="https://www.facebook.com/kindandwarm/?hc_ref=NEWSFEED&fref=nf"  target="_blank" class="list-group-item list-group-item-action list-group-item-success">浪情溫飽Kind&Warm</a>
+                        <a href="http://www.langlangdontcry.com.tw/"  target="_blank" class="list-group-item list-group-item-action list-group-item-info">浪浪別哭</a>
+                        <a href="http://www.i-furkid.com/Index/Index.aspx"  target="_blank" class="list-group-item list-group-item-action list-group-item-warning">愛毛孩寵物資訊服務網</a>
+                    </div>
+                    <HR>
+                    <p align = center>
+                        <a href="https://www.facebook.com/%E7%84%A1%E4%BA%8B%E4%B8%8D%E7%99%BB%E4%B8%89%E5%AF%B6%E6%AE%BF-100102557272405/?notif_t=fbpage_fan_invite&notif_id=1497357619686127">
+                            <img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/19030693_1390271987715254_655293368031604418_n.jpg?oh=77f436464aea562a758bee480dff97eb&oe=59E4AAA9">
+                        </a>
+                    </p>
+                    <br>
+                    <p align = center>
+                            <embed src="http://www.youmaker.com/m.swf" width="419" height="20" type="application/x-shockwave-flash" flashvars="file=http://k003.kiwi6.com/hotlink/c7psr8ija2/Totoro.mp3&autostart=true&repeat=true&backcolor=0xE38EFF" />
+                    </p>
+                    </div>
+                </div>
+            </div><div class='col-sm-8 col-md-8'>
+                <div class='panel panel-primary'>
+                    <div class='panel-heading'>        
+                        {% block headmessage %} {% endblock %}
+                    </div>
+                    <div class='panel-body'>
+                        {% block content %} {% endblock %}
+                    </div>
+                    <div class='panel-footer' style="background-color:royalblue">
+                        {% include 'footer.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

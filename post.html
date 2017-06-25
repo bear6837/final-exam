@@ -1,0 +1,12 @@
+<!-- post.html -->
+{% extends 'index.html' %}
+{% load markdown_deux_tags %}
+{% block title %} {{post.title}} {% endblock %}
+{% block headmessage %}
+    <h3 style="font-family:Microsoft JhengHei;color:#FFFFFF">{{ post.title }}</h3>
+{% endblock %}
+{% block content %} 
+        <p>
+            {{ post.body|markdown }}</a>
+        </p>
+{% endblock %}
